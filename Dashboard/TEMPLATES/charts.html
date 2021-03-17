@@ -1,0 +1,60 @@
+<!--Charts: Overview of pie chart UI components-->
+
+{% extends "masterPage.html" %}
+
+{% block content %}
+<div class="row">
+
+    <!-- Sidebar -->
+     <!-- Left Rail -->
+     {% include "menu.html" %}
+
+    <div class="col-12 col-lg-9 col-xl-10">
+        <div class="section">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="panel panel--loose panel--raised base-margin-bottom">
+                        <h2 style="text-align:center" class="subtitle"> Configuration Change Data</h2>
+                        <hr>
+                        <div class="section">
+                            <div class="row">
+                                <div id="chart_one" class="col-md-4" style="height: 500">
+                                    <script>
+                                      const sdk = new ChartsEmbedSDK({
+                                        baseUrl: 'https://charts.mongodb.com/charts-configuration-change-log-iftga'
+                                      });
+
+                                      const chart_one = sdk.createChart({ chartId: '433d6729-1892-471c-ac71-34432638a4de', height: 400, width: 400 });
+                                      chart_one.render(document.getElementById('chart_one'));
+                                    </script>
+                                </div>
+                                <div id="chart_two" class="col-md-4" style="float: none; margin: 0 auto;">
+                                    <script>
+                                      const chart_two = sdk.createChart({ chartId: 'e6172525-d352-4aaa-a2d4-0be3c5a743fd', height: 400, width: 400 });
+                                      chart_two.render(document.getElementById('chart_two'));
+                                    </script>
+                                </div>
+                            </div>
+                            <div class='row' style="margin-top: 100px">
+                                <div id="chart_three">
+                                    <script>
+                                      const chart_three = sdk.createChart({ chartId: '840efc0a-5d42-48db-b97a-ef337e03888d', height: 800, width: 500 });
+                                      chart_three.render(document.getElementById('chart_three'));
+                                    </script>
+                                </div>
+                                <div id="chart_four" class="col-md-4" style="float: none; margin: 0 auto;">
+                                    <script>
+                                      const chart_four = sdk.createChart({ chartId: '6d84d321-91dc-496b-af50-a4bd44806a18', height: 800, width: 500 });
+                                      chart_four.render(document.getElementById('chart_four'));
+                                    </script>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

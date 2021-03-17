@@ -1,0 +1,3 @@
+show ip route
+show run
+dot1x

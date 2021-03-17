@@ -1,0 +1,7 @@
+logging host
+login
+dot1x system-auth-control
+description this is a test interface
+aaa new-model
+dot1x credentials user
+aaa authentication dot1x default local

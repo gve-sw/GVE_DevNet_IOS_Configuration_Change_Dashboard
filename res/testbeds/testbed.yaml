@@ -1,0 +1,31 @@
+---
+testbed:
+  name: configchangelogger
+  credentials: 
+    default:
+      username: "ENTER SSH USERNAME"
+      password: "ENTER SSH PASSWORD"
+
+devices:
+  gve-csr1k-1: #EXACT HOSTNAME OF THE DEVICE
+    os: iosxe
+    type: iosxe
+    connections:
+      defaults:
+        class: unicon.Unicon
+      ssh:
+        protocol: ssh
+        ip: "IP ADDRESS OF DEVICE TO VALIDATE"
+        port: "22"
+
+  gve-csr1k-2: #EXACT HOSTNAME OF THE DEVICE
+    os: iosxe
+    type: iosxe
+    connections:
+      defaults:
+        class: unicon.Unicon
+      ssh:
+        protocol: ssh
+        ip: "IP ADDRESS OF ANOTHER DEVICE TO VALIDATE"
+        port: "22"
+
